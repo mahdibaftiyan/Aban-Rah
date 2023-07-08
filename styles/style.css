@@ -1,0 +1,78 @@
+body {
+  background: url(../images/main/home-index.jpg) center/cover no-repeat fixed;
+}
+/* main styles */
+#main {
+  z-index: 1;
+}
+
+/* introduction of a company styles */
+.intro {
+  width: 90vw;
+  margin: 4rem auto;
+  z-index: 1;
+}
+
+.intro-container {
+  width: 50%;
+  z-index: 1;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.46);
+  padding: 1rem;
+  text-align: right;
+}
+
+.intro-title {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.intro-container .intro-title {
+  margin: 1rem 0;
+}
+
+.intro-par {
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+
+/* location - call - email -  styles */
+.find {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.box-container {
+  direction: rtl;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+.box {
+  padding: 1rem;
+}
+.box i {
+  margin: 0.5rem;
+}
+.box-text {
+  margin: 1rem;
+  text-align: center;
+}
+.box-text a {
+  text-decoration: none;
+  color: #11101b;
+  direction: rtl;
+}
+
+/* medias responsive */
+@media only screen and (max-width: 800px) {
+  .intro-container {
+    width: 100%;
+  }
+  .box-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

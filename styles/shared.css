@@ -1,0 +1,180 @@
+/* share color */
+:root {
+  --colorgray1: #4d4d4d;
+  --color02: #11101b;
+}
+/* fonts */
+@font-face {
+  font-family: vazir;
+  src: url(../fonts/Vazirmatn-Medium.ttf);
+}
+/* styles for all tags */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: vazir;
+}
+
+/* strat style headere */
+#main-header {
+  width: 90vw;
+  height: 4rem;
+  padding: 0 5rem;
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* login item style */
+#main-header .log-in {
+  z-index: 6;
+}
+#main-header .log-in a {
+  color: var(--color02);
+  padding: 0.3rem;
+}
+#main-header .log-in a:active {
+  border-radius: 1rem;
+  background-color: #fefefe;
+  outline: 6px solid rgba(255, 255, 255, 0.46);
+}
+/* end log in */
+
+/* navitem style */
+.nav-items {
+  direction: rtl;
+  height: 100%;
+}
+.nav-items ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-items ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.nav-items ul li a {
+  color: var(--color02);
+  padding: 0.3rem;
+}
+.nav-items ul li a:active {
+  border-radius: 1rem;
+  background-color: #fefefe;
+  outline: 6px solid rgba(255, 255, 255, 0.46);
+}
+.nav-items ul li.logo {
+  max-width: 4rem;
+  height: 100%;
+  padding: 6px;
+}
+.nav-items ul li.logo img {
+  width: 100%;
+  height: 100%;
+}
+/* end navitem */
+
+/* glass background */
+.bg-Glass {
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(16.6px);
+  -webkit-backdrop-filter: blur(16.6px);
+}
+
+/* active style for navitem select */
+.active {
+  outline: 6px solid rgba(255, 255, 255, 0.46);
+  border-radius: 1rem;
+  background-color: #fefefe;
+}
+
+/* meny responsive styles */
+.bars {
+  font-size: 1.3rem;
+  height: auto;
+  width: auto;
+  display: none;
+}
+
+/* copy right styles */
+.copy-contaienr {
+  width: 100%;
+  text-align: center;
+  color: #11101b;
+  margin-top: 9rem;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+/* media for responsive */
+@media only screen and (max-width: 900px) {
+  /* header  */
+  #main-header {
+    padding: 0 1rem;
+    z-index: 5;
+  }
+  /* menu bar icon */
+  .bars {
+    display: block;
+    cursor: pointer;
+    z-index: 6;
+  }
+  /* hidden nav items */
+  .nav-items ul li.logo {
+    display: none;
+  }
+  /* nav item style */
+  .nav-items {
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: #fefefe;
+  }
+  /* styles when click menu bar icon */
+  .nav-items.activeBars {
+    height: auto;
+  }
+  .nav-items.activeBars ul {
+    opacity: 1;
+  }
+  /* ul navitem */
+  .nav-items ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-items ul li {
+    margin: 1rem 0;
+  }
+
+  /* for active show navitem */
+  .nav-items ul li a:active {
+    background-color: #b2ebf2;
+    outline: 6px solid #e0f7fa;
+  }
+  #main-header .log-in a:active {
+    background-color: #b2ebf2;
+    outline: 6px solid #e0f7fa;
+  }
+  .active {
+    background-color: #b2ebf2;
+    outline: 6px solid #e0f7fa;
+  }
+}

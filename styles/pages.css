@@ -1,0 +1,139 @@
+/* share colors */
+:root {
+  --color-home: #11101b;
+  --formcolor: #f9f9f9;
+  --titlecolor: #f9f9f9;
+  --backgroundtitle: #f9f9f9;
+  --inputcolor: #eeeeee;
+  --errorcolor: #ff5722;
+  --successcolor: #00c853;
+}
+
+body {
+  background: url(../images/page/pagsimg.jpg) center/cover no-repeat fixed;
+}
+
+/* start main codes */
+main {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+/* styles box for conatct - about */
+.box-container {
+  direction: rtl;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.box {
+  padding: 1rem;
+}
+.box i {
+  margin: 0.5rem;
+}
+.box-text {
+  margin: 1rem;
+  text-align: center;
+}
+.box-text a {
+  text-decoration: none;
+  color: #11101b;
+  direction: rtl;
+}
+/* end box style */
+
+/* regester user styles */
+.container {
+  width: 35%;
+  margin: 5rem auto;
+  border: solid 2px #ababab;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #e0e0e0;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  color: var(--color-home);
+  background-color: #bdbdbd;
+  padding: 0.5rem;
+}
+
+.form {
+  padding: 1rem;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formControl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formControl label {
+  width: 50%;
+  padding: 0.3rem;
+  color: var(--color-home);
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+}
+
+.formControl input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  direction: ltr;
+  background-color: var(--inputcolor);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.formControl input:focus {
+  border: 3px solid #304ffe;
+  background-color: var(--formcolor);
+  color: var(--color-home);
+}
+
+.form button {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-home);
+  color: var(--backgroundtitle);
+  cursor: pointer;
+}
+.form button:active {
+  background-color: var(--inputcolor);
+}
+/* end regester styles */
+
+/* copy right container */
+.copy-contaienr {
+  margin-top: 10rem !important;
+}
+
+/* media - responsive */
+@media only screen and (max-width: 800px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    width: 60%;
+  }
+}
